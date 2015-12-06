@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Projeto Alba</title>
+
+<!----meta dados para comnpartilhamento---->
+<meta name="description" content="Leia esta história incrível e descubra as cores junto com a princesa Alba."/>
+<meta property="og:locale" content="pt_BR" />
+<!--<meta property="og:type" content="article" />-->
+<meta property="og:title" content="Projeto Alba" />
+<meta property="og:description" content="Leia esta história incrível e descubra as cores junto com a princesa Alba." />
+<meta property="og:image" content="img/historia/2.jpg" />
+
+
+<link rel="icon" href="img/favicon.png" type="image/png">
+
+<script>
+//loading de carregamento do site ao abrir.
+ window.addEventListener("load", function(){
+    var loading = document.getElementById("loading");
+    document.body.removeChild(loading);
+   });
+</script>
+
+<!----folhas de estilos criadas pelo desenvolvedor---->
+<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+<!------Scripts criados pelo desenvolvedor------->
+<script src="js/codigo.js" type="text/javascript"></script>
+
+<!-----------chama folha jquery parallax------------->
+<script type="text/javascript" src="js/jquery-parallax.js"></script>
+<script>
+$(document).ready(function(){
+$('div.section').each(function(){
+	var $obj = $(this);
+	$(window).scroll(function() {
+		var yPos = ($(window).scrollTop() / $obj.data('speed')); 
+		var bgpos = '50%'+ yPos + 'px';
+		$obj.css('background-position', bgpos );
+	}); 
+});	
+});
+</script>
+
+<!-------scripts e css fullpage-------->
+<link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css" />
+<script src="js/jqueryui.js"></script>
+
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				autoScrolling: false
+			});
+		});
+	</script>
+</head>
+
+<body onload="iniciaPag()" onresize="redimencaoPag()" style="background-color: #FFFFFF;">
+<!-----div de loading do site----->
+<div id="loading"></div>
+<!---elementos inclusos para não dar erro no javascript--->
+<div id="fp-nav"></div>
+<!--background audio-->
+<audio loop id="back-audio">
+  <source src="audio/back/bg-loop.ogg" type="audio/ogg">
+  <source src="audio/back/bg-loop.mp3" type="audio/mpeg">
+  Seu navegador não suporta a tag de audio.
+</audio>
+<!--audios da locucao-->
+<audio id="1">
+  <source src="audio/locucao/caminho1/img10-alba e peixes.mp3" type="audio/mpeg">
+  Seu navegador não suporta a tag de audio.
+</audio>
+<audio id="2">
+  <source src="audio/locucao/caminho1/img11-alba e coelho.mp3" type="audio/mpeg">
+  Seu navegador não suporta a tag de audio.
+</audio>
+
+<!--começa primeira página-->
+	<div id="fullpage">
+    	<div id="conteudo">
+            <div class="cem">
+            	<img src="img/historia/caminho1/1.gif" id="1" class="cem" onclick="locucao(this.id)">
+        		<img src="img/historia/caminho1/2.jpg" id="2" class="cem" onclick="locucao(this.id)">
+                <!--<img src="img/historia/caminho1/8.jpg" onclick="alturaCaminhos()" id="ultima" class="cem">-->
+                
+                <!--entra botao do FaceBook
+                <span class='st_facebook_hcount' displayText='Facebook'></span>-->
+                
+                <!--<div id="fim">
+                	<div id="prev">
+                       	<a href="pag1.html"><img src="img/btn/prev.png" width="35" height="50" alt="anterior" /><spam>Anterior</spam></a>
+                    </div>
+                    <!--<p class="direitos" style="top: auto !important;">Copyright © 2014 Projeto Alba™, All Rights Reserved.</p>
+                </div>-->
+                <div id="pass" style="top: -50px;">
+                	<div id="prev">
+                       	<a href="pag1.html"><img src="img/btn/prev.png" width="35" height="50" alt="anterior" /><spam>Volte</spam></a>
+                    </div>
+                    <div id="next">
+                       	<a href="comum.html"><spam>Continue</spam><img src="img/btn/next.png" width="35" height="50" alt="anterior" /></a>
+                    </div>
+            	</div>
+                <p class="direitos">Copyright © 2014 Projeto Alba™, All Rights Reserved.</p>
+         </div>
+   	</div>
+    
+    <!--controles do audio-->
+    <img src="img/btn/audio-inpause.png" onclick="playPause()" width="50" height="45" id="control-audio" />
+	<!--termina controles do audio-->
+    <!--termina index-->
+    <!--começa menu-->
+	<div id="back-menu" style="display: none;">
+    	<div class="opcoes">
+        
+        	<!----------------começa conteudo da opção "trabalho" do menu de opções------------------>
+        	<div id="trabalho">
+            	<h1>O Trabalho</h1>
+                <div class="divider"></div>
+                <h2>Por que nossa escolha?</h2>
+                <p>Formando em Produção Multimídia na PUC Minas, os profissionais da equipe Projeto Alba produziram esse trabalho como TCC (Trabalho de Conclusão de Curso).</p>
+<p>A ideia é fechar com chave de ouro toda a trajetória percorrida durante os dois anos e meio no curso e mostrar tudo que aprendemos durante esse processo.</p>
+<p>A produção deste trabalho foi simples, a divisão das tarefas foi direta e as metas estabelecidas.</p>
+<p>O trabalho final vocês veem aqui, o Projeto Alba é nossa apresentação para as pessoas de fora para mostrar: "Mercado de trabalho, estamos aqui e vamos disputar suas vagas com unhas e dentes, nos aguardem!"</p>
+<p>Nós da Equipe Alba esperamos que vocês aproveitem nosso trabalho, obrigado.</p>
+				<div class="divider"></div>
+                <h2>Documentação</h2>
+              	<p>Baixe a documentação do trabalho com todas as informações de pesquisa e produção:</p>
+                <a href="documento/documento projeto alba.pdf" target="_blank"><img src="img/btn/pdf-alba.png" alt="baixe a documentação do trabalho Projeto Alba" /></a><br/><br/><br/>
+                <div class="divider"></div>
+                <h2>Divisão de tarefas</h2>
+                <p><b>Design e produção web:</b> Thales Alves e Mateus Carneiro</p>
+                <p><b>Documentação e gerenciamento:</b> Bruno Bonifácio, Matheus Fonseca e Mateus Carneiro</p>
+                <p><b>Roteiro e Ilustrações:</b> Sullivan Henrique</p>
+                <p><b>Animação e produção da locução:</b> Bruno Bonifácio</p>
+                <p><b>Trilha sonora:</b> Thales Alves e LabÁudio SG</p>
+				<div id="prev" style="position: inherit;" onclick="voltaMenu()">
+	    			<a href="#"><img src="img/btn/prev.png" width="35" height="50" alt="anterior" /><spam>Voltar</spam></a>
+            	</div>
+            </div>
+            
+            <!----------------começa conteudo da opção "integrantes" do menu de opções------------------>
+            <div id="integrantes">
+            	<h1>Equipe</h1>
+                <div class="divider"></div>
+                <h2>Web Design</h2>
+                <div class="content-circulos">
+                	<div class="circulo-legenda">
+                    	<div class="circulos-hover">
+                        	<div class="back circulos">
+                        		<p>
+                                	Até mais, <br />e obrigado pelos peixes!
+                                </p>
+                        	 </div>
+                    		<div class="circulos">
+                        		<img src="img/integrantes/thales.jpg">
+                			</div>
+                        	<p>Thales Alves</p>
+                        </div>
+                    </div>
+                    <div class="circulo-legenda">
+                    	<div class="circulos-hover">
+                        	<div class="back circulos">
+                        		<p>
+                                	A experienza é a influenza da cienza na aparenza.
+                                </p>
+                        	</div>
+                    		<div class="circulos">
+                        		<img src="img/integrantes/mateus-carneiro.jpg">
+                			</div>
+                        	<p>Mateus Carneiro</p>
+                        </div>
+                    </div>               
+                    
+                    <div class="divider"></div>
+                <h2>Documentação</h2>
+                <div class="circulo-legenda">
+                	<div class="circulos-hover">
+                        <div class="back circulos">
+                        	<p>
+                               	Em todo caos existe um universo, <br/>e em toda desordem existe uma ordem oculta.
+                            </p>
+                        </div>
+                    	<div class="circulos">
+                        	<img src="img/integrantes/bruno.jpg">
+                		</div>
+                        <p>Bruno Bonifácio</p>
+                    </div>
+                 </div>
+                 <div class="circulo-legenda">
+                 	<div class="circulos-hover">
+                     	<div class="back circulos">
+                        	<p>
+                                	O tamanho do muro depende de como se enxerga o tijolo.
+                            </p>
+                        </div>
+                   		<div class="circulos">
+                	  		<img src="img/integrantes/mateus-fonseca.jpg">
+                		</div>
+                    	<p>Matheus Fonseca</p>
+                     </div>
+                  </div>
+                    
+                <div class="divider"></div>
+                <h2>Desenho</h2>
+                <div class="circulo-legenda" style="float:none; margin: 0 auto;">
+                	<div class="circulos-hover">
+                    	<div class="back circulos">
+                        	<p>
+                                	...
+                            </p>
+                        </div>
+                    	<div class="circulos">
+                        	<img src="img/integrantes/sullivan.jpg">
+                		</div>
+                        <p>Sullivan Silva</p>
+                    </div>
+                </div>
+           	</div>
+            <div id="prev" style="position: inherit;" onclick="voltaMenu()">
+               	<a href="#"><img src="img/btn/prev.png" width="35" height="50" alt="anterior" /><spam>Voltar</spam></a>
+            </div>                   
+            </div>
+            
+            <!------começa detalhes projeto alba---------->                        
+            <div id="projeto-detalhes">
+            	<h1>Projeto Alba</h1>
+                <div class="divider"></div>
+                <h2>O que é o projeto</h2>
+                <img src="img/alba-escrito.png" style="float: right;">
+                <div class="bloco-de-texto">
+                	<p>O projeto é uma Graphic Novel com possibilidades de multi-caminhos contendo elementos interativos, como sons, pequenas animações e a possibilidade do leitor escolher a sequência da narrativa.</p>
+					<p>A arte é representada com ilustrações que são a tradução visual da história contada pelo projeto, apresentando uma narrativa harmônica e fluida.</p>
+					<p>O produto é baseado em um conto autoral criado por um dos integrantes da equipe.</p>
+                </div>
+                <div class="divider"></div>
+                <h2>Elementos Externos</h2>
+                <p>Ao longo do projeto foram usados alguns elementos externos de domínio público, os quais são listados abaixo:</p><br/>
+                <p><b>Imagens</b></p>
+                <p>Imagem1 - Origami tags vector set<br>
+                Link: <a href="http://www.freepik.com/free-vector/origami-tags-vector-set_724998.htm" target="_blank">http://www.freepik.com/free-vector/origami-tags-vector-set_724998.htm</a></p>
+                <p>Imagem2 - Calligraphic frames decorative floral set<br>
+                Link: <a href="http://www.freepik.com/free-vector/calligraphic-frames-decorative-floral-set_724574.htm" target="_blank">http://www.freepik.com/free-vector/calligraphic-frames-decorative-floral-set_724574.htm</a></p>
+                <p><b>Fontes</b></p>
+                <p>fonte1 - Quicksand<br>
+                link: <a href="http://www.google.com/fonts/specimen/Quicksand" target="_blank">http://www.google.com/fonts/specimen/Quicksand</a></p>
+                <p>fonte2 - Foglihten No07<br>
+                link: <a href="http://www.dafont.com/pt/foglihtenno07.font" target="_blank">http://www.dafont.com/pt/foglihtenno07.font</a></p>
+                <p>fonte3 - Caviar Dreams<br>
+                link: <a href="http://www.dafont.com/pt/caviar-dreams.font" target="_blank">http://www.dafont.com/pt/caviar-dreams.font</a></p>
+                
+                <p><b>Áudio</b></p>
+                <p>A trilha sonora do projeto foi produzida pelo LabAudio SG em conjunto com a equipe do Projeto Alba.</p>
+                
+                <p><b>Locução</b></p>
+                <p>Locução feita por Camila Coelho.</p>
+                
+                <div id="prev" style="position: inherit;" onclick="voltaMenu()">
+                   	<a href="#"><img src="img/btn/prev.png" width="35" height="50" alt="anterior" /><spam>Voltar</spam></a>
+                </div>
+            </div>
+        </div>
+    	<img src="img/btn/fexar-slin.png" id="btn-fechar" onclick="animaMenu()" width="35" height="35" alt="fechar menu" />
+		<div id="menu-capa">
+   	  		<ul id="into-menu-capa">
+           		<a href="#" onclick="conteudo('trabalho')"><li>O TRABALHO</li></a>
+        		<a href="#" onclick="conteudo('integrantes')"><li>EQUIPE</li></a>
+        		<a href="#" onclick="conteudo('projeto')"><li>O PROJETO ALBA</li></a>
+        	</ul>
+    	</div>
+    </div>
+    <!--<img src="img/btn/menu.png" onclick="apareceMenu()" id="bt-menu" width="40" height="40" alt="menu" />-->
+    <!--teste de menu por divs-->
+    <div id="menu" onclick="animaMenu()">
+    	<div class="barra-menu"></div>
+        <div class="barra-menu"></div>
+        <div class="barra-menu"></div>
+    </div>
+    <!--termina menu-->
+</body>
+</html>
